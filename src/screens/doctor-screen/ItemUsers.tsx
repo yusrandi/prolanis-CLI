@@ -60,7 +60,7 @@ export default function ItemUsers({ userKey, recipent, navigation }: props) {
             style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: Spacing * 2 }}>
             <Image source={require('../../../assets/images/male_doctor.jpg')} style={{ width: 52, aspectRatio: 1, borderRadius: 52 }} resizeMode="cover" />
             <View style={{ flex: 1, marginLeft: Spacing }}>
-                <Text style={{ fontFamily: Font['poppins-bold'], fontSize: FontSize.medium }}>{user.nama}</Text>
+                <Text style={{ fontFamily: Font['poppins-bold'], fontSize: FontSize.medium }}>{user?.nama}</Text>
                 <Text style={{ fontFamily: Font['poppins-regular'], fontSize: FontSize.small, color: 'grey' }}>{lastMsg?.text}</Text>
             </View>
             <Text style={{ fontFamily: Font['poppins-regular'], fontSize: FontSize.small / 2 + 4, color: 'grey' }}>{lastMsg?.timestamp}</Text>

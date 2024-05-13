@@ -13,7 +13,7 @@ import Spacing from '../constants/Spacing';
 import Font from '../constants/Font';
 import ItemMenuTips from '../components/ItemMenuTips';
 import { UserType, emptUser } from '../type/UserType';
-import { jadwalNormalDatabaseRef, jadwalObesitasDatabaseRef, resepNormalDatabaseRef, resepObesitasDatabaseRef, tolakUkursDatabaseRef, usersDatabaseRef, resepDatabaseRef, jadwalDatabaseRef } from '../config/firebase';
+import { jadwalNormalDatabaseRef, jadwalObesitasDatabaseRef, resepNormalDatabaseRef, resepObesitasDatabaseRef, tolakUkursDatabaseRef, usersDatabaseRef, resepDatabaseRef, jadwalDatabaseRef, nutrisiDatabaseRef, tipsDatabaseRef } from '../config/firebase';
 import { DataResepNormal } from '../data/DataResepNormal';
 import { ResepType } from '../type/ResepType';
 import { DataResepObesitas } from '../data/DataResepObesitas';
@@ -21,6 +21,8 @@ import { DataTolakUkurs } from '../data/DataTolakUkur';
 import { TolakUkurType } from '../type/TolakUkurType';
 import { dataJadwalsNormal } from '../data/DataJadwalsNormal';
 import { dataJadwalsObesitas } from '../data/DataJadwalsObesitas';
+import { listNutrisi } from '../data/DataNutrisi';
+import { AsupanType } from '../type/AsupanType';
 
 
 type VideoMenu = {
@@ -86,6 +88,8 @@ export default function HomeScreen({ navigation }: TabsStackScreenProps<"home">)
         // creteReseps()
         // createTolakUkurs()
         // createJadwals()
+        // createNutrisi()
+        // createTips()
     }, [])
 
     async function creteReseps() {
@@ -120,13 +124,32 @@ export default function HomeScreen({ navigation }: TabsStackScreenProps<"home">)
                 .catch((error) => console.log(`jadwalobesitas index ${index} error ${error}`))
         })
     }
+    async function createNutrisi() {
+        listNutrisi.map(async (nutrisi: AsupanType, index: number) => {
+            await nutrisiDatabaseRef.child(nutrisi.title).set(nutrisi)
+                .then(() => console.log(`nutrsi index ${index} created`))
+                .catch((error) => console.log(`nutrisi index ${index} error ${error}`))
+        })
+    }
+
+    async function createTips() {
+        list.map((item) => {
+            item.videos.map((video, index) => {
+                tipsDatabaseRef.child(item.title).child(video.video).set(video)
+                    .then(() => console.log(`tips index ${index} created`))
+                    .catch((error) => console.log(`tips index ${index} error ${error}`))
+            })
+        })
+    }
+
+
 
 
     async function getUser() {
         usersDatabaseRef
             .child(auth().currentUser?.uid!)
             .on('value', snapshot => {
-                console.log('User data: ', snapshot.val());
+                // console.log('User data: ', snapshot.val());
                 setUser(snapshot.val() as UserType)
 
             });
@@ -146,9 +169,9 @@ export default function HomeScreen({ navigation }: TabsStackScreenProps<"home">)
                     </Text>
                 </View>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('profile')}
+                    onPress={() => auth().signOut()}
                     style={{
-                        width: 52,
+                        width: 40,
                         aspectRatio: 1,
                         alignItems: "center",
                         justifyContent: "center",
@@ -158,8 +181,8 @@ export default function HomeScreen({ navigation }: TabsStackScreenProps<"home">)
                     }}
                 >
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <Icon name="setting" size={32} color={colors.text} style={{ position: 'relative' }} />
-                        <View
+                        <Icon name="logout" size={24} color={colors.text} style={{ position: 'relative' }} />
+                        {/* <View
                             style={{
                                 position: 'absolute',
                                 backgroundColor: 'red',
@@ -180,7 +203,7 @@ export default function HomeScreen({ navigation }: TabsStackScreenProps<"home">)
                                 }}>
                                 *
                             </Text>
-                        </View>
+                        </View> */}
                     </View>
 
                 </TouchableOpacity>
@@ -250,9 +273,7 @@ export default function HomeScreen({ navigation }: TabsStackScreenProps<"home">)
                 barStyle='dark-content'
             />
             <Header />
-            <SearchBar />
-
-
+            {/* <SearchBar /> */}
             <Image source={require('../../assets/images/pola.png')} style={{ alignItems: 'center', alignSelf: 'center', marginBottom: Spacing * 2 }} />
             <Text style={{ textAlign: 'left', fontSize: FontSize.medium, fontFamily: Font['poppins-bold'], paddingHorizontal: Spacing * 2, marginBottom: Spacing, color: 'black' }}>Featured services</Text>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%', paddingHorizontal: Spacing * 2 }}>

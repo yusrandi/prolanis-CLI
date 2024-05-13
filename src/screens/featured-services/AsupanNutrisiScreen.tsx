@@ -15,6 +15,12 @@ import { listNutrisi } from '../../data/DataNutrisi';
 
 export default function AsupanNutrisiScreen({ navigation, route: { params: { user } } }: RootStackScreenProps<"asupan">) {
     const { colors } = useTheme();
+    const listImages = [
+        require('../../../assets/images/nutrisi/carbo.png'),
+        require('../../../assets/images/nutrisi/protein.png'),
+        require('../../../assets/images/nutrisi/lemak.png'),
+        require('../../../assets/images/nutrisi/ic_serat.png'),
+    ]
 
     return (
         <View style={{ flex: 1, paddingHorizontal: Spacing * 2 }}>
@@ -44,10 +50,10 @@ export default function AsupanNutrisiScreen({ navigation, route: { params: { use
                             paddingVertical: Spacing * 2,
 
                         }}
-                        renderItem={({ item }) => {
+                        renderItem={({ item, index }) => {
                             return (
                                 <TouchableOpacity onPress={() => navigation.navigate("asupanDetail", { asupan: item })} style={{ flex: 1, margin: Spacing }}>
-                                    <Image source={item.image} style={{ borderRadius: Spacing * 2, height: 150, width: "100%" }} />
+                                    <Image source={listImages[index]} style={{ borderRadius: Spacing * 2, height: 150, width: "100%" }} />
                                     <Text style={{ fontFamily: Font['poppins-semiBold'], fontSize: FontSize.small, backgroundColor: colors.primary, borderRadius: Spacing, padding: Spacing, textAlign: 'center', marginTop: Spacing }}>{item.title}</Text>
                                 </TouchableOpacity>
                             )

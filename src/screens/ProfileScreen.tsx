@@ -9,6 +9,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { UserType, emptUser } from '../type/UserType';
 import auth from '@react-native-firebase/auth'
 import { usersDatabaseRef } from '../config/firebase';
+import FontSize from '../constants/FontSize';
 
 
 
@@ -51,15 +52,21 @@ export default function ProfileScreen({ navigation }: NativeStackScreenProps<Roo
 
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: Spacing }}>
-            <TouchableOpacity
-                onPress={() => navigation.goBack()}
-                style={{ backgroundColor: colors.primary, position: 'absolute', top: Spacing * 4, left: Spacing * 2, padding: Spacing, borderRadius: 50 }}>
-                <AntDesign name='arrowleft' size={30} color={'white'} style={{}} />
-            </TouchableOpacity>
+            <View style={{ flexDirection: 'row', position: 'absolute', top: Spacing * 4, left: Spacing * 2, padding: Spacing, alignItems: 'center' }}>
+                <TouchableOpacity
+                    onPress={() => navigation.goBack()}
+                    style={{ backgroundColor: colors.primary, borderRadius: 50, padding: Spacing }}>
+                    <AntDesign name='arrowleft' size={30} color={'white'} style={{}} />
+                </TouchableOpacity>
+                <View style={{ flex: 1, marginLeft: Spacing * 2 }}>
+                    <Text style={{ fontWeight: 'bold', fontSize: FontSize.medium, color: 'black' }}>{"Profile"}</Text>
+                </View>
+            </View>
+
             <Header />
             <TouchableOpacity
                 onPress={() => {
-
+                    navigation.navigate('editProfile', { user })
                 }}
                 style={{ backgroundColor: 'white', width: '100%', flexDirection: 'row', alignItems: 'center', padding: Spacing, borderRadius: Spacing * 2, marginBottom: Spacing }}>
 
@@ -86,7 +93,7 @@ export default function ProfileScreen({ navigation }: NativeStackScreenProps<Roo
             </TouchableOpacity>
             <TouchableOpacity
                 onPress={() => {
-
+                    navigation.navigate('editPassword', { user })
                 }}
                 style={{ backgroundColor: 'white', width: '100%', flexDirection: 'row', alignItems: 'center', padding: Spacing, borderRadius: Spacing * 2, marginBottom: Spacing }}>
 

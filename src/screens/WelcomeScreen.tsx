@@ -34,9 +34,9 @@ export default function WelcomeScreen({ navigation }: NativeStackScreenProps<Roo
                         <TouchableOpacity onPress={() => navigation.navigate('login')} style={{ backgroundColor: 'white', width: '100%', padding: Spacing, alignItems: 'center', marginTop: Spacing * Spacing / 2, borderRadius: Spacing, elevation: 5 }}>
                             <Text style={{ fontSize: FontSize.medium, fontWeight: 'bold', color: 'black' }}>Sign In</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => navigation.navigate('registerChoice')} style={{ backgroundColor: '#DBB62B', width: '100%', padding: Spacing, alignItems: 'center', marginTop: Spacing, borderRadius: Spacing, elevation: 5 }}>
+                        {/* <TouchableOpacity onPress={() => navigation.navigate('registerChoice')} style={{ backgroundColor: '#DBB62B', width: '100%', padding: Spacing, alignItems: 'center', marginTop: Spacing, borderRadius: Spacing, elevation: 5 }}>
                             <Text style={{ color: 'white', fontSize: FontSize.medium, fontWeight: 'bold' }}>Sign Up</Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                     </View>
                 </View>
             </SafeAreaView>

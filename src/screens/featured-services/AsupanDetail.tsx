@@ -60,29 +60,49 @@ function ItemAsupanDetail({ title, desc, sound }: props) {
             <View style={{}}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: Spacing, alignItems: 'center' }}>
                     <Text style={{ fontFamily: Font['poppins-bold'], fontSize: FontSize.medium, color: 'black' }}>{title}</Text>
-                    <TouchableOpacity
-                        onPress={() => {
+                    <View style={{ flexDirection: 'row' }}>
+                        <TouchableOpacity
+                            onPress={() => {
+                                try {
+                                    // or play from url
+                                    SoundPlayer.playUrl(sound)
+                                } catch (e) {
+                                    console.log(`cannot play the sound file`, e)
+                                }
+                            }}
 
-                            try {
+                            style={{
+                                alignItems: "center",
+                                justifyContent: "center",
+                                borderColor: 'white',
+                                borderWidth: 5,
+                                borderRadius: 30
+                            }}
+                        >
+                            <AntDesign name="play" size={30} color={colors.primary} />
+                        </TouchableOpacity>
+                        <View style={{ width: Spacing }} />
+                        <TouchableOpacity
+                            onPress={() => {
+                                try {
+                                    // or play from url
+                                    SoundPlayer.stop()
+                                } catch (e) {
+                                    console.log(`cannot play the sound file`, e)
+                                }
+                            }}
 
-                                // or play from url
-                                SoundPlayer.playUrl(sound)
-
-                            } catch (e) {
-                                console.log(`cannot play the sound file`, e)
-                            }
-                        }}
-
-                        style={{
-                            alignItems: "center",
-                            justifyContent: "center",
-                            borderColor: 'white',
-                            borderWidth: 5,
-                            borderRadius: 30
-                        }}
-                    >
-                        <AntDesign name="play" size={30} color={colors.primary} />
-                    </TouchableOpacity>
+                            style={{
+                                alignItems: "center",
+                                justifyContent: "center",
+                                borderColor: 'white',
+                                borderWidth: 5,
+                                borderRadius: 30
+                            }}
+                        >
+                            <AntDesign name="pausecircle" size={30} color={colors.primary} />
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <Text style={{ fontFamily: Font['poppins-regular'], fontSize: FontSize.small, color: 'black' }}>{desc}</Text>
             </View>

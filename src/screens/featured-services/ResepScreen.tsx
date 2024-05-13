@@ -106,7 +106,7 @@ export default function ResepScreen({ navigation, route: { params: { status } } 
                         }}>Resep Makanan</Text>
                     </View>
                 </View>
-                <SearchBar />
+                {/* <SearchBar /> */}
 
                 <View style={{ flex: 1, marginTop: Spacing * 2 }}>
                     {

@@ -44,6 +44,8 @@ import { dataNotifikasiss } from '../data/DataNotifikasi';
 import Notifications from '../config/Notifications';
 import DokterForumScreen from '../screens/doctor-screen/DokterForumScreen';
 import DokterChatScreen from '../screens/doctor-screen/DokterChatScreen';
+import EditProfileScreen from '../screens/profile/EditProfileScreen';
+import EditPasswordScreen from '../screens/profile/EditPasswordScreen';
 
 
 export type RootStackParamList = {
@@ -96,6 +98,12 @@ export type RootStackParamList = {
     dokterHome: undefined
     dokterForum: undefined
     dokterChat: {
+        user: UserType
+    }
+    editProfile: {
+        user: UserType
+    }
+    editPassword: {
         user: UserType
     }
 
@@ -198,6 +206,20 @@ function UserStack() {
             <RootStack.Screen
                 name="profile"
                 component={ProfileScreen}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <RootStack.Screen
+                name="editProfile"
+                component={EditProfileScreen}
+                options={{
+                    headerShown: false,
+                }}
+            />
+            <RootStack.Screen
+                name="editPassword"
+                component={EditPasswordScreen}
                 options={{
                     headerShown: false,
                 }}
@@ -312,13 +334,13 @@ export default function RootNavigator() {
         // login("use@use.use", "1sampai8")
         console.log({ user });
         const unsubscribe = auth().onAuthStateChanged(async authenticatedUser => {
-            console.log({ authenticatedUser });
+            // console.log({ authenticatedUser });
             if (authenticatedUser) {
                 usersDatabaseRef
                     .child(authenticatedUser.uid)
                     .once('value')
                     .then(snapshot => {
-                        console.log('User data: ', snapshot.val());
+                        // console.log('User data: ', snapshot.val());
                         const userType: UserType = snapshot.val() as UserType
                         setUser(userType)
                     })

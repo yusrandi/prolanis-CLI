@@ -49,7 +49,58 @@ export default function PenjelasanDetailScreen({ navigation, route: { params: { 
                 </ScrollView>
             </SafeAreaView>
 
-            <TouchableOpacity
+
+            <View style={{
+                flexDirection: 'row', alignItems: "center",
+                justifyContent: "center",
+                position: "absolute",
+                bottom: Spacing,
+                right: Spacing
+            }}>
+                <TouchableOpacity
+                    onPress={() => {
+                        try {
+                            // or play from url
+                            SoundPlayer.playUrl(penjelasan.sound)
+                        } catch (e) {
+                            console.log(`cannot play the sound file`, e)
+                        }
+                    }}
+
+                    style={{
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderColor: 'white',
+                        borderWidth: 5,
+                        borderRadius: 30
+                    }}
+                >
+                    <Icons name="play" size={30} color={colors.primary} />
+                </TouchableOpacity>
+                <View style={{ width: Spacing }} />
+                <TouchableOpacity
+                    onPress={() => {
+                        try {
+                            // or play from url
+                            SoundPlayer.stop()
+                        } catch (e) {
+                            console.log(`cannot play the sound file`, e)
+                        }
+                    }}
+
+                    style={{
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderColor: 'white',
+                        borderWidth: 5,
+                        borderRadius: 30
+                    }}
+                >
+                    <Icons name="pausecircle" size={30} color={colors.primary} />
+                </TouchableOpacity>
+            </View>
+
+            {/* <TouchableOpacity
                 onPress={() => {
 
                     try {
@@ -75,7 +126,7 @@ export default function PenjelasanDetailScreen({ navigation, route: { params: { 
                 }}
             >
                 <Icons name="play" size={32} color={'white'} />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
         </View>
     )
 }

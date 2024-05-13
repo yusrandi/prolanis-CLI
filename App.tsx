@@ -12,6 +12,7 @@ import React, { useEffect, type PropsWithChildren } from 'react';
 import {
   Linking,
   NativeEventEmitter,
+  PermissionsAndroid,
   Platform,
   ScrollView,
   StatusBar,
@@ -38,27 +39,38 @@ import Notifications from './src/config/Notifications';
 import AuthProvider from './src/context/AuthContext';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-
-
+import PushNotification, { Importance } from 'react-native-push-notification';
 
 const App = () => {
 
   const targetTime = new Date();
 
   // Set the desired time (02:40) on the targetTime object
-  targetTime.setHours(2);
-  targetTime.setMinutes(48);
+  targetTime.setHours(4);
+  targetTime.setMinutes(50);
   targetTime.setSeconds(0);
 
 
   Notifications.schduleNotification(new Date(Date.now() + 5 * 1000), "initial notif");
-  // Notifications.schduleNotification(targetTime);
+  // Notifications.schduleNotification(targetTime, "Jam 4:50");
+
+  const requestPermission = async () => {
+
+  };
+
+
+
+  useEffect(() => {
+    requestPermission()
+  }, [])
 
   useEffect(() => {
     setTimeout(() => {
       SplashScreen.hide()
     }, 2000)
   }, [])
+
+
 
   return <AuthProvider>
     <SafeAreaProvider style={{ flex: 1 }} >

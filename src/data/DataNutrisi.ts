@@ -4,7 +4,7 @@ export const listNutrisi: AsupanType[] = [
     {
         id: 1,
         title: 'Karbohidrat',
-        image: require('../../assets/images/nutrisi/carbo.png'),
+        image: '../../../assets/images/nutrisi/carbo.png',
         definisi: "Karbohidrat merupakan salah satu zat gizi yang diperlukan oleh manusia yang berfungsi untuk menghasilkan energi bagi tubuh manusia. Karbohidrat akan dipecah dan diserap dalam tubuh dalam bentuk monosakarida dan gula. Penyerapan gula dapat meningkatkan kadar gula darah dan sekresi insulin.\nKarbohidrat dapat dibagi menjadi 2 (dua) jenis, yaitu sederhana dan komplek. Kedua jenis karbohidrat ini memiliki perbedaan dalam struktur kimiawinya. Secara umum, karbohidrat sederhana hanya mengandung gula dasar yang mudah dicerna dan diserap oleh tubuh. Sementara, karbohidrat komplek memiliki rantai gula yang lebih panjang, sehingga membutuhkan waktu cukup lama untuk mencerna dan menyerap karbohidrat jenis ini",
         kebutuhan: "Untuk karbohidrat, porsi yang dianjurkan adalah 45–65% dari total kalori atau minimal 130 gram per hari. Pilihlah sumber karbohidrat kompleks yang berserat tinggi, seperti kentang, sayuran, buah, gandum, jagung, dan kacang-kacangan.\nHindari karbohidrat sederhana, seperti jus buah, gula pasir, gula batu, dan permen, serta produk olahan tepung misalnya kue kering. Gula pasir masih boleh dikonsumsi maksimal 5% dari total kalori atau kurang lebih 4 sendok teh per hari. Pemanis buatan rendah kalori pun aman digunakan selama tidak melebihi batas aman.\n",
         dianjurkan: "Makanan dengan karbohidrat kompleks: nasi merah,  kentang, ubi, jagung",
@@ -19,7 +19,7 @@ export const listNutrisi: AsupanType[] = [
     {
         id: 2,
         title: 'Protein',
-        image: require('../../assets/images/nutrisi/protein.png'),
+        image: '../../../assets/images/nutrisi/protein.png',
         definisi: "Fungsi protein dalam tubuh manusia yaitu pertumbuhan dan pemeliharaan jaringan, sehingga tubuh dapat mendukung dan pemeliharaan jaringan. Terdapat beberapa fungsi lain dari protein yaitu sebagai sumber utama energi selain karbohidrat dan lemak, sebagai zat pembangun, zat pengatur. Yang terdiri dari protein hewani dan protein nabati.",
         kebutuhan: "Komposisi protein pada diet yang dianjurkan adalah 10-20% dari total asupan energi, dengan angka kebutuhan harian adalah 0,8 gr/kg berat badan yang berasal dari sumber protein berkualitas baik (protein yang dapat dicerna dan mengandung sembilan jenis asam amino esensial)\nBagi penderita diabetes, protein juga sangat penting untuk dikonsumsi. Jumlah asupan protein yang dianjurkan adalah 10–35% dari total kalori. Pilihlah sumber protein yang baik, seperti ikan, telur, ayam tanpa kulit, daging sapi tanpa lemak, tahu, tempe, kacang-kacangan, dan produk susu rendah lemak.\n",
         dianjurkan: "Tempe, Tahu, Ikan dan makanan laut, Ayam dan unggas lainnya (pilih daging dada jika memungkinkan), Telur dan produk susu rendah lemak",
@@ -35,7 +35,7 @@ export const listNutrisi: AsupanType[] = [
     {
         id: 3,
         title: 'Lemak',
-        image: require('../../assets/images/nutrisi/lemak.png'),
+        image: '../../../assets/images/nutrisi/lemak.png',
         definisi: "Lemak membantu sel-sel dalam tubuh agar dapat terbangun dengan baik. Selain itu lemak juga menyusun sel-sel agar sel tersebut dapat bekerja dengan baik. Sebagai contoh lemak membantu menyelimuti setiap sel dalam saraf agar dapat menghantarkan pesan lebih cepat dan baik. Terbagi atas lemak tak jenuh (lemak baik) dan lemak jenuh (lemak trans)",
         kebutuhan: "Asupan lemak yang dianjurkan sekitar 20-25% kebutuhan kalori, serta tidak diperkenankan melebihi 30% total dari asupan energi.  Biasanya asupan lemak tidak bisa dihindarkan untuk dikonsumsi namun terpenting untuk menghindari konsumsi lemak yang tergolong lemak jenuh dan lemak trans seperti contoh berupa daging berlemak atau susu full cream.\nPilihlah bahan makanan yang mengandung lemak baik, misalnya ikan atau lemak dari tumbuhan, serta hindari lemak jenuh yang banyak terkandung dalam gorengan dan lemak dari hewan.\nSementara itu, asupan garam hanya diperbolehkan maksimal 1 sendok teh garam dapur dalam sehari atau setara dengan 2.300 mg natrium per hari. Hindari makanan yang mengandung natrium tersembunyi, seperti vetsin, dan makanan yang diawetkan atau ditambahkan bahan pengawet.\n",
         dianjurkan: "Lemak Tak jenuh: Alpukat, Minyak zaitun, Kacang almond, Minyak Canola, Minyak biji bunga matahari,  gandum utuh, produk susu rendah lemak, ikan, dan kacang-kacangan.",
@@ -50,7 +50,7 @@ export const listNutrisi: AsupanType[] = [
     {
         id: 4,
         title: 'Serat',
-        image: require('../../assets/images/nutrisi/ic_serat.png'),
+        image: '../../../assets/images/nutrisi/ic_serat.png',
         definisi: "Makanan yang mengandung  Serat dapat  memperlancar proses pencernaan dengan cara menyerap air ke dalam usus besar. Dengan begitu, tinja yang dihasilkan akan lebih lembut dan besar, sehingga buang air besar akan lebih lancar dan teratur. Serat dapat memaksimalkan penyerapan nutrisi lainnya dari makanan, terutama nutrisi yang jumlahnya sedikit.\nJumlah asupan serat yang dianjurkan minimal 5 porsi sayur dan buah, dengan ukuran 1 porsi setara 1 mangkuk kecil. Beberapa jenis makanan berserat yang dapat Anda konsumsi meliputi alpukat, oatmeal, bayam, brokoli, apel, pir, pisang, kacang almond, dan kacang pistachio.\n",
         kebutuhan: "Jumlah konsumsi serat yang disarankan\n- Bagi penderita diabetes, disarankan mengkonsumsi 40 gram serat per hari.\n- Untuk pencegahan, disarankan mengkonsumsi 20-35 gram serat per hari.\n- Tambahkan serat secara bertahap, 3-5 gram per hari untuk mencegah kembung.\n- Minumlah minimal 8 gelas air per hari agar serat dapat bekerja optimal.",
         dianjurkan: "Sayur tinggi serat: kangkung, daun kacang, oyong, ketimun, tomat, jambu air, kembang kol, lobak, sawi, selada, seledri,  akar tanaman chicory, buah jeruk, pepaya, apel, kismis, serta kacang-kacangan seperti kacang merah, kacang tolo dan lentil.",

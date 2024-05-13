@@ -3,7 +3,7 @@ import { ImageSourcePropType } from "react-native"
 export type AsupanType = {
     id: number
     title: string
-    image: ImageSourcePropType
+    image: string
     definisi: string
     kebutuhan: string
     dianjurkan: string

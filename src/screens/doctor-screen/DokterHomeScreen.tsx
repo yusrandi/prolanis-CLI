@@ -112,9 +112,9 @@ export default function DokterHomeScreen({ navigation }: RootStackScreenProps<"d
                     </Text>
                 </View>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('profile')}
+                    onPress={() => auth().signOut()}
                     style={{
-                        width: 52,
+                        width: 40,
                         aspectRatio: 1,
                         alignItems: "center",
                         justifyContent: "center",
@@ -124,8 +124,8 @@ export default function DokterHomeScreen({ navigation }: RootStackScreenProps<"d
                     }}
                 >
                     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                        <Icons name="setting" size={32} color={colors.text} style={{ position: 'relative' }} />
-                        <View
+                        <Icons name="logout" size={24} color={colors.text} style={{ position: 'relative' }} />
+                        {/* <View
                             style={{
                                 position: 'absolute',
                                 backgroundColor: 'red',
@@ -146,7 +146,7 @@ export default function DokterHomeScreen({ navigation }: RootStackScreenProps<"d
                                 }}>
                                 *
                             </Text>
-                        </View>
+                        </View> */}
                     </View>
 
                 </TouchableOpacity>
@@ -211,7 +211,7 @@ export default function DokterHomeScreen({ navigation }: RootStackScreenProps<"d
         <View style={{ flex: 1, paddingTop: Spacing }}>
             <SafeAreaView style={{}}>
                 <Header />
-                <SearchBar />
+                {/* <SearchBar /> */}
                 <TouchableOpacity
                     onPress={() => navigation.navigate('dokterForum')}
                     style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: Spacing * 2, borderBottomColor: 'grey', borderBottomWidth: 0.5 }}>

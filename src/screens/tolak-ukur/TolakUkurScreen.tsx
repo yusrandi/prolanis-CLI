@@ -174,36 +174,67 @@ export default function TolakUkurScreen({ navigation }: RootStackScreenProps<"to
 
 
                                             </View>
+                                            <View style={{ flexDirection: 'row', alignSelf: 'flex-end' }}>
+                                                <TouchableOpacity
+                                                    onPress={() => {
 
-                                            <TouchableOpacity
-                                                onPress={() => {
+                                                        try {
 
-                                                    try {
-
-                                                        // or play from url
-                                                        SoundPlayer.playUrl(tolakUkurs[index]?.sound)
+                                                            // or play from url
+                                                            SoundPlayer.playUrl(tolakUkurs[index]?.sound)
 
 
-                                                    } catch (e) {
-                                                        console.log(`cannot play the sound file`, e)
-                                                    }
-                                                }}
+                                                        } catch (e) {
+                                                            console.log(`cannot play the sound file`, e)
+                                                        }
+                                                    }}
 
-                                                style={{
-                                                    width: 50,
-                                                    height: 50,
-                                                    backgroundColor: colors.primary,
-                                                    borderRadius: 60,
-                                                    alignItems: "center",
-                                                    justifyContent: "center",
-                                                    position: "relative",
-                                                    flexDirection: "row",
-                                                    alignSelf: 'flex-end',
-                                                    marginTop: Spacing * 2
-                                                }}
-                                            >
-                                                <Icons name="play" size={32} color={'white'} />
-                                            </TouchableOpacity>
+                                                    style={{
+                                                        width: 50,
+                                                        height: 50,
+                                                        backgroundColor: colors.primary,
+                                                        borderRadius: 60,
+                                                        alignItems: "center",
+                                                        justifyContent: "center",
+                                                        position: "relative",
+                                                        flexDirection: "row",
+                                                        alignSelf: 'flex-end',
+                                                        marginTop: Spacing * 2
+                                                    }}
+                                                >
+                                                    <Icons name="play" size={32} color={'white'} />
+                                                </TouchableOpacity>
+                                                <View style={{ width: Spacing }} />
+                                                <TouchableOpacity
+                                                    onPress={() => {
+
+                                                        try {
+
+                                                            // or play from url
+                                                            SoundPlayer.pause()
+                                                        } catch (e) {
+                                                            console.log(`cannot play the sound file`, e)
+                                                        }
+                                                    }}
+
+                                                    style={{
+                                                        width: 50,
+                                                        height: 50,
+                                                        backgroundColor: colors.primary,
+                                                        borderRadius: 60,
+                                                        alignItems: "center",
+                                                        justifyContent: "center",
+                                                        position: "relative",
+                                                        flexDirection: "row",
+                                                        alignSelf: 'flex-end',
+                                                        marginTop: Spacing * 2
+                                                    }}
+                                                >
+                                                    <Icons name="pausecircle" size={32} color={'white'} />
+                                                </TouchableOpacity>
+                                            </View>
+
+
 
 
                                         </View>

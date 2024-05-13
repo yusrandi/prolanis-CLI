@@ -12,11 +12,11 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2583BCEA20C94290B208C28E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47CE43F8043E45A2A01E23E1 /* Poppins-Regular.ttf */; };
+		74052ADAF4C94258A3EDBA31 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE0AF7B3C8454AF196B025BA /* Poppins-SemiBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-ProlanisCareCli-ProlanisCareCliTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ProlanisCareCli-ProlanisCareCliTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C4A66904FCD840D0A5D83C34 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C03B55722C44508BB0BE05A /* Poppins-Bold.ttf */; };
-		2583BCEA20C94290B208C28E /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47CE43F8043E45A2A01E23E1 /* Poppins-Regular.ttf */; };
-		74052ADAF4C94258A3EDBA31 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE0AF7B3C8454AF196B025BA /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,15 +41,15 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ProlanisCareCli/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ProlanisCareCli-ProlanisCareCliTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProlanisCareCli-ProlanisCareCliTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-ProlanisCareCli.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProlanisCareCli.debug.xcconfig"; path = "Target Support Files/Pods-ProlanisCareCli/Pods-ProlanisCareCli.debug.xcconfig"; sourceTree = "<group>"; };
+		47CE43F8043E45A2A01E23E1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-ProlanisCareCli.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProlanisCareCli.release.xcconfig"; path = "Target Support Files/Pods-ProlanisCareCli/Pods-ProlanisCareCli.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-ProlanisCareCli-ProlanisCareCliTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProlanisCareCli-ProlanisCareCliTests.debug.xcconfig"; path = "Target Support Files/Pods-ProlanisCareCli-ProlanisCareCliTests/Pods-ProlanisCareCli-ProlanisCareCliTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ProlanisCareCli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProlanisCareCli.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C03B55722C44508BB0BE05A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ProlanisCareCli/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ProlanisCareCli-ProlanisCareCliTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProlanisCareCli-ProlanisCareCliTests.release.xcconfig"; path = "Target Support Files/Pods-ProlanisCareCli-ProlanisCareCliTests/Pods-ProlanisCareCli-ProlanisCareCliTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		6C03B55722C44508BB0BE05A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		47CE43F8043E45A2A01E23E1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		FE0AF7B3C8454AF196B025BA /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FE0AF7B3C8454AF196B025BA /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7525BCFA12C449CE8EF3B1FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C03B55722C44508BB0BE05A /* Poppins-Bold.ttf */,
+				47CE43F8043E45A2A01E23E1 /* Poppins-Regular.ttf */,
+				FE0AF7B3C8454AF196B025BA /* Poppins-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,17 +164,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		7525BCFA12C449CE8EF3B1FF /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				6C03B55722C44508BB0BE05A /* Poppins-Bold.ttf */,
-				47CE43F8043E45A2A01E23E1 /* Poppins-Regular.ttf */,
-				FE0AF7B3C8454AF196B025BA /* Poppins-SemiBold.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -507,6 +506,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S5JS4SR9QC;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ProlanisCareCli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -533,6 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S5JS4SR9QC;
 				INFOPLIST_FILE = ProlanisCareCli/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

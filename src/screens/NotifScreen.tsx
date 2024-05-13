@@ -47,9 +47,10 @@ export default function NotifScreen() {
                                     </View>
                                     <View style={styles.content}>
                                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                            <View>
-                                                <Text style={{ fontSize: FontSize.small / 2 + 4, }}>{moment().format('DD/MM/YYYY')}</Text>
+                                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                                <Text style={{ fontSize: FontSize.small / 2 + 4, }}>{item.status}</Text>
                                             </View>
+                                            <Text style={{ fontSize: FontSize.small / 2 + 4, }}>{moment().format('DD/MM/YYYY')}</Text>
                                         </View>
                                         <View style={{ backgroundColor: 'white', flexDirection: 'row', padding: Spacing, alignItems: 'center' }}>
 

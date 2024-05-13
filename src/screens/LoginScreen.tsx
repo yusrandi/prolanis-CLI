@@ -30,17 +30,18 @@ export default function LoginScreen({ navigation }: NativeStackScreenProps<RootS
             >
                 <View style={{ backgroundColor: 'white', flex: 1, borderRadius: Spacing * 2, alignItems: 'center', justifyContent: 'center', padding: Spacing * 2 }}>
 
+                    <Text style={{ fontFamily: Font['poppins-bold'], fontSize: FontSize.large, marginBottom: Spacing * 2 }}>Prolanis Care</Text>
                     <View style={{ width: '100%' }}>
-                        <AppTextInput placeholder='Email' value={email} onChangeText={text => setEmail(text)} />
+                        <AppTextInput placeholder='Email' value={email} onChangeText={text => setEmail(text)} keyboardType='email-address' />
                         <AppTextInput placeholder='Password' secureTextEntry value={password} onChangeText={text => setPassword(text)} />
                     </View>
                     <TouchableOpacity disabled={isLoading} onPress={handleSignIn} style={{ backgroundColor: '#DBB62B', width: '100%', padding: Spacing, alignItems: 'center', marginTop: Spacing * 2, borderRadius: Spacing, elevation: 5 }}>
                         <Text style={{ color: 'white', fontFamily: Font['poppins-bold'], fontSize: FontSize.large }}>{isLoading ? "..." : "Sign In"}</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity onPress={() => navigation.navigate('registerChoice')} style={{ width: '100%', padding: Spacing, alignItems: 'center' }}>
+                    {/* <TouchableOpacity onPress={() => navigation.navigate('registerChoice')} style={{ width: '100%', padding: Spacing, alignItems: 'center' }}>
                         <Text style={{ fontSize: FontSize.small }}>belum punya akun ? Daftar</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
             </SafeAreaView>
         </KeyboardAvoidingView>
